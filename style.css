@@ -287,6 +287,7 @@ td {
     border-right: 1px solid rgb(0, 0, 0);
     padding: 2rem 1rem 3rem 1rem;
     width:35%;
+    font-size: 1.7rem;
 }
 .about-head-pic-two{
     width:30%;
@@ -306,6 +307,15 @@ td {
     border-right: 1px solid rgb(0, 0, 0);
     width: 45%;
     padding: 2rem 1rem 6rem 1rem;
+    font-size: 1.2rem;
+}
+.about-head-nine{
+    padding: 2rem 1rem 6rem 1rem;
+    width:40%;
+    font-size: 1.7rem;
+}
+.footer{
+    padding: 1rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -321,12 +331,16 @@ td {
         padding: 2.5rem 0rem 2rem 1rem;
         letter-spacing: 0.5rem;
     }
+    .footer{padding: 0.5rem;}
   }
   @media screen and (max-width: 580px) {
     .about-head{padding: 2rem 1rem 2rem 1rem;}
     .about-head h2 {font-size: 1rem;}
     .huge-font{font-size: 2em;}
     .about-head-pic{width:20%;}
+    .about-head-eight, .about-head-nine, .about-head-five{
+        font-size: 1rem;
+    }
   }
   @media screen and (max-width: 380px) {
     .about-head{width:80%;}
