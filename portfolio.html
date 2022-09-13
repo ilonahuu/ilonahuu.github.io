@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li class="nav-left"><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class= "nav-left-mq"><a href="about.html">About me</a></li>
+                <li><a class="active" href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+        <header class="portfolio-head">
+            <h1>Portfolio</h1>
+        </header>
+        <div class="picture-section">
+            <section class="portfolio-box">
+                <div class="portfolio-text">
+                    <p>Perinteinen kuvitus digitaalisesti</p>
+                </div>
+                <div class="portfolio-pic">
+                    <img src="flunssa_ilonahuu.png" alt="Flunssa">
+                </div>
+            </section>
+            <section class="portfolio-box">
+                <div class="portfolio-text">
+                    <p>Digitaalinen kuvitus</p>
+                </div>
+                <div class="portfolio-pic">
+                    <img src="Ilta_ilonahuu.png" alt="Ilta">
+                </div>
+            </section>
+            <section class="portfolio-box">
+                <div class="portfolio-text">
+                    <p>Mallista piirtäminen digitaalisesti</p>
+                </div>
+                <div class="portfolio-pic">
+                    <img src="omena_ilonahuu.png" alt="Omena">
+                </div>
+            </section>
+            <section class="portfolio-box">
+                <div class="portfolio-text">
+                    <p>Flat design</p>
+                </div>
+                <div class="portfolio-pic">
+                    <img src="hahmot_ilonahuu.png" alt="Perhe">
+                </div>
+            </section>
+            <section class="portfolio-box">
+                <div class="portfolio-text">
+                    <p>Vektorigrafiikka</p>
+                </div>
+                <div class="portfolio-pic">
+                    <img src="kasvi_ilonahuu.png" alt="Peikonlehti">
+                </div>
+            </section>
+            <section class="portfolio-box">
+                <div class="portfolio-text">
+                    <p>Flat design</p>
+                </div>
+                <div class="portfolio-pic">
+                    <img src="oranssi_ilonahuu.png" alt="maisema">
+                </div>
+            </section>
+            <section class="portfolio-box">
+                <div class="portfolio-text">
+                    <p>Gradientteja vektorigrafiikkana</p>
+                </div>
+                <div class="portfolio-pic">
+                    <img src="maisema_ilonahuu.png" alt="Maisema">
+                </div>
+            </section>
+            <section class="portfolio-box">
+                <div class="portfolio-text">
+                    <p>Kuvankäsittely</p>
+                </div>
+                <div class="portfolio-pic">
+                    <img src="sentti_ilonahuu.jpg" alt="Kettuterrieri">
+                </div>
+            </section>
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="popuppic">
+        </div>
+        <script>
+            //Hae laatikko
+            var modal = document.getElementById('myModal');
+            
+            // Haetaan kuvat
+            var img = document.querySelectorAll(".portfolio-pic img");
+            var modalImg = document.getElementById("popuppic");
+            for(var i = 0; i < img.length; i++){
+                img[i].addEventListener("click", function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                });
+            }
+            
+            // Sulkunappi
+            var closemodalbtn = document.querySelector(".close");
+            
+            // Klikkaamalla sulkee kuvan
+            closemodalbtn.addEventListener("click", function() { 
+              modal.style.display = "none";
+            });
+            </script>
+    </body>
+</html>
